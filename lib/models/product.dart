@@ -16,9 +16,3 @@ class Product {
   });
 }
 
-var p = Product(
-    id: '12',
-    title: "mobile",
-    description: "qwerty",
-    image: "assets/a",
-    price: 120);
