@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shopapp/screens/Product_Details.dart';
 
 class GridProductItem extends StatelessWidget {
-  
   const GridProductItem({
     Key? key,
     required this.id,
@@ -22,8 +21,7 @@ class GridProductItem extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             // Add your tap handler logic here, for example:
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const ProductDetails()));
+            Navigator.of(context).pushNamed(ProductDetails.id, arguments: id);
           },
           child: Image.asset(image, fit: BoxFit.cover),
         ),

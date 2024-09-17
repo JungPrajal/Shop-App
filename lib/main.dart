@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopapp/screens/Product_Details.dart';
 import 'package:shopapp/screens/home.dart';
-import 'package:shopapp/widgets/GridProductItem.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         ProductDetails.id: (context) => ProductDetails(),
-        HomePage.id: (context)=> HomePage(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }
