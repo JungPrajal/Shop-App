@@ -15,3 +15,10 @@ class Product {
     this.isFavourite = false,
   });
 }
+
+var p = Product(
+    id: '12',
+    title: "mobile",
+    description: "qwerty",
+    image: "assets/a",
+    price: 120);
