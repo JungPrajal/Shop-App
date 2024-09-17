@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopapp/models/product.dart';
+import 'package:shopapp/widgets/GridProductItem.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
         id: '4',
         title: "Apple",
         description: "iphone 11",
-        image: "assets/11pro.jpg",
+        image: "assets/z6.jpg",
         price: 1200),
     Product(
         id: '5',
@@ -50,7 +51,10 @@ class HomePage extends StatelessWidget {
         body: GridView.builder(
           itemCount: availProduct.length,
           itemBuilder: (context, index) {
-            return null;
+            return GridProductItem(
+                id: availProduct[index].id,
+                title: availProduct[index].title,
+                image: availProduct[index].image);
           },
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
