@@ -3,25 +3,26 @@ import 'package:shopapp/models/product.dart';
 import 'package:shopapp/widgets/GridProductItem.dart';
 
 class HomePage extends StatelessWidget {
+  static const id = '/HomePage';
   HomePage({Key? key}) : super(key: key);
 
   final List<Product> availProduct = [
     Product(
         id: '1',
-        title: "Apple",
+        title: "Iphone 11 pro max",
         description: "iphone 11",
         image: "assets/11pro.jpg",
         price: 1200),
     Product(
         id: '2',
-        title: "Apple",
+        title: "Iphone 11 pro max",
         description: "iphone 11pro max",
         image: "assets/11pro.jpg",
         price: 1200),
     Product(
         id: '3',
-        title: "Apple",
-        description: "iphone 14",
+        title: "Iphone 15 pro max",
+        description: "iphone 15",
         image: 'assets/15pro.jpg',
         price: 1200),
     Product(
@@ -48,6 +49,18 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.pink,
+          title: Text(
+            "Jk Electronics",
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.cyanAccent,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          centerTitle: true,
+        ),
         body: GridView.builder(
           itemCount: availProduct.length,
           itemBuilder: (context, index) {
