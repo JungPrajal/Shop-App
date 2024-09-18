@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../models/product.dart';
 
-class Products with ChangeNotifier{
-
-    List<Product> availProduct = [
+class Products with ChangeNotifier {
+  // Private list for available products
+  List<Product> _availProducts = [
     Product(
         id: '1',
         title: "Iphone 11 pro max",
@@ -14,7 +13,7 @@ class Products with ChangeNotifier{
     Product(
         id: '2',
         title: "Iphone 11 pro max",
-        description: "iphone 11pro max",
+        description: "iphone 11 pro max",
         image: "assets/11pro.jpg",
         price: 1200),
     Product(
@@ -42,5 +41,13 @@ class Products with ChangeNotifier{
         image: "assets/z6.jpg",
         price: 1200),
   ];
- 
+
+  // Getter for availProducts
+  List<Product> get availProducts => _availProducts;
+
+  // Method to add a product
+  // void addProduct(Product value) {
+  //   _availProducts.add(value);
+  //   notifyListeners(); // Notify listeners to rebuild widgets
+  // }
 }

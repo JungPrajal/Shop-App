@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shopapp/providers/products_provider.dart';
 import 'package:shopapp/screens/Product_Details.dart';
 import 'package:shopapp/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +26,18 @@ class MyApp extends StatelessWidget {
         ProductDetails.id: (context) => ProductDetails(),
         HomePage.id: (context) => HomePage(),
       },
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => Products(),
+      child: HomePage(),
     );
   }
 }
