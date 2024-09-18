@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:shopapp/screens/Product_Details.dart';
 
 class GridProductItem extends StatelessWidget {
@@ -20,7 +21,7 @@ class GridProductItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            // Add your tap handler logic here, for example:
+            // Navigate to product details with product ID
             Navigator.of(context).pushNamed(ProductDetails.id, arguments: id);
           },
           child: Image.asset(image, fit: BoxFit.cover),
@@ -33,13 +34,13 @@ class GridProductItem extends StatelessWidget {
           ),
           leading: IconButton(
             onPressed: () {
-              // Add logic for favorite button tap
+              // Logic for favorite button
             },
             icon: const Icon(Icons.favorite),
           ),
           trailing: IconButton(
             onPressed: () {
-              // Add logic for shopping bag button tap
+              // Logic for adding to shopping cart
             },
             icon: const Icon(Icons.shopping_bag),
           ),
